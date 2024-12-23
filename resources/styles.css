@@ -1,10 +1,13 @@
 * {
     font-size: 16px;
-    font-family: Arial, Helvetica, sans-serif;
+    /* font-family: Arial, Helvetica, sans-serif; */
+    font-family: "Ubuntu";
+    line-height: 1.5;
     color: rgb(67, 55, 67);
     background-color: #d1c1c1;
     margin: 0;
     padding: 0;
+    /* width: 100%; */
 }
 
 header {
@@ -12,12 +15,12 @@ header {
     min-height: 5rem;
     position: sticky;
     top: 0;
-    margin: 0 1rem 1rem 1rem;
+    border-bottom: 1px solid rgb(67, 55, 67);
 }
 
 nav {
-   border: 1px solid black; 
    margin-left: auto; /*moved nav bar to right from logo*/
+   margin-right: 1rem;
    align-content: end; /*moved nav items to bottom*/
 }
 nav ul {
@@ -25,11 +28,10 @@ nav ul {
     justify-content: center;
     align-items: center;
     list-style: none; /*removed bullet points*/
-    border: 1px solid red; 
 }
 
 li {
-    margin-left: 20px; /*Added space between nav items*/
+    margin-left: 1.5rem; /*Added space between nav items*/
 }
 
 a {
@@ -42,4 +44,45 @@ a {
 
 .logo {
     width: 6em;
+    margin-left: 1rem;
 }
+
+/* Mission section */
+.mission {
+    display: flex;
+    align-items: center; /*moved description to center*/
+    justify-content: center;
+    padding-top: 2rem;
+}
+
+.description {
+    max-width: 40%;
+    padding: 1.5rem;
+}
+.description h1 {
+    padding: 1rem;
+    font-size: 2rem;
+    font-weight: lighter;
+    font-style: italic;
+    text-align: center;
+    text-decoration:underline;
+}
+.description p {
+    line-height: 2;
+    text-align: center;
+    font-size: 1.15rem;
+}
+
+.description-image {
+   width: 40%;
+   border: 1px solid burlywood;
+   border-radius: 30px;
+   height: 25rem;
+   background-image: url("./images/mission_image.jpeg");
+   background-size: 100%;
+   background-repeat: no-repeat;
+   background-position: center;
+
+}
+
+/* Today's Deals */
