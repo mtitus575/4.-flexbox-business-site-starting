@@ -15,7 +15,10 @@ header {
     min-height: 5rem;
     position: sticky;
     top: 0;
+    z-index: 5;
     border-bottom: 1px solid rgb(67, 55, 67);
+    flex-grow: 1;
+    flex-shrink: 1;
 }
 
 nav {
@@ -28,6 +31,7 @@ nav ul {
     justify-content: center;
     align-items: center;
     list-style: none; /*removed bullet points*/
+
 }
 
 li {
@@ -43,13 +47,15 @@ a {
 }
 
 .logo {
-    width: 6em;
+    width: 7rem;
     margin-left: 1rem;
 }
 
 /* Mission section */
 .mission {
     display: flex;
+    flex-grow: 1;
+    flex-shrink: 1;
     align-items: center; /*moved description to center*/
     justify-content: center;
     padding-top: 2rem;
@@ -58,6 +64,8 @@ a {
 .description {
     max-width: 40%;
     padding: 1.5rem;
+    flex-grow: 1;
+    flex-shrink: 1;
 }
 .description h1 {
     padding: 1rem;
@@ -66,11 +74,15 @@ a {
     font-style: italic;
     text-align: center;
     text-decoration:underline;
+    flex-grow: 1;
+    flex-shrink: 1;
 }
 .description p {
     line-height: 2;
     text-align: center;
     font-size: 1.15rem;
+    flex-grow: 1;
+    flex-shrink: 1;
 }
 
 .description-image {
@@ -82,7 +94,86 @@ a {
    background-size: 100%;
    background-repeat: no-repeat;
    background-position: center;
-
 }
 
-/* Today's Deals */
+/* Today's Deals Button Area*/ 
+/* To do: 
+1. The movement needs fixing 
+2. Make on-hover and on-click effects */
+.deals {
+    border: 0.15rem solid #427767;
+    border-radius: 1rem;
+    text-align: center;
+    font-size: large;
+    font-weight: bold;
+    align-content: center;
+    color: #f9fffd;
+    background-color: #129870;
+    position: absolute;
+    top: 385px;
+    right: 170px;
+    min-height: 60px;
+    min-width:300px;
+    box-shadow: 0.2rem 0.2rem 0.2rem; /*Will this look better on hover or active under pseudoclasses?*/
+}
+
+/* Tablet size rules */
+@media only screen and (max-width: 769px) {
+    .deals {
+        display: none;
+    }
+    .description-image {
+        display: none;
+    }
+    .deals-mobile {
+        border: 0.15rem solid #427767;
+        border-radius: 1rem;
+        text-align: center;
+        align-content: center;
+        color: #f9fffd;
+        padding: 0 0.5rem;
+        background-color: #129870;
+        box-shadow: 0.2rem 0.2rem 0.2rem; /*Will this look better on hover or active under pseudoclasses?*/
+    }
+    .deals-pc {
+        display: none;
+    }
+}
+
+
+
+/* Product section */
+.range {
+    padding: 1rem;
+    margin-top: 2rem;
+    font-size: 2rem;
+    font-weight: lighter;
+    font-style: italic;
+    text-align: center;
+}
+.biltong { /*container*/
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-shrink: 2;
+    gap: 1.25rem;
+    margin-top: 2rem;
+}
+.droewors { /*container*/
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1.25rem;
+    margin-top: 2rem;  
+}
+
+/* Container for both catergories */
+/*individual item container */
+.item {
+    justify-items: center;
+    border: 2px solid #8a8a8a;
+    height: auto;
+}
+
+
+
