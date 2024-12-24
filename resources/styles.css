@@ -4,7 +4,8 @@
     font-family: "Ubuntu";
     line-height: 1.5;
     color: rgb(67, 55, 67);
-    background-color: #d1c1c1;
+    /* background-color: #d1c1c1; */
+    background-color: rgb(218, 212, 212);
     margin: 0;
     padding: 0;
     /* width: 100%; */
@@ -31,7 +32,6 @@ nav ul {
     justify-content: center;
     align-items: center;
     list-style: none; /*removed bullet points*/
-
 }
 
 li {
@@ -42,6 +42,33 @@ a {
     text-decoration: none;
     cursor: pointer;
 }
+
+button {
+    margin: 1rem;
+    border: 0.2rem solid #cbc88b;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    background-color: #cbc88b;
+    width: 8rem;
+    height: 2rem;
+}
+/* effects for button */
+button:hover {
+    background-color: #b8b7a5;
+    border: 0.2rem solid #b8b7a5;
+    width: 8.5rem;
+    height: 2.15rem;
+}
+button:active {
+    background-color: #cbc88b;
+    border: 0.2rem solid #cbc88b;
+    width: 8rem;
+    height: 2rem;
+}
+.deals-mobile{
+    visibility: hidden;
+}
+
 .cart {
     width: 1.5rem;
 }
@@ -91,7 +118,7 @@ a {
    border-radius: 30px;
    height: 25rem;
    background-image: url("./images/mission_image.jpeg");
-   background-size: 100%;
+   background-size: cover;
    background-repeat: no-repeat;
    background-position: center;
 }
@@ -109,16 +136,27 @@ a {
     align-content: center;
     color: #f9fffd;
     background-color: #129870;
+    cursor: pointer;
     position: absolute;
-    top: 385px;
-    right: 170px;
+    /* top: 24.0625rem; */
+    right: 9%;
+    bottom: 51%;
     min-height: 60px;
     min-width:300px;
     box-shadow: 0.2rem 0.2rem 0.2rem; /*Will this look better on hover or active under pseudoclasses?*/
 }
 
+@media only screen and (max-width: 834px) { /*removes the button inside the background img */
+    .deals {
+        visibility: hidden
+    }
+}
 /* Tablet size rules */
 @media only screen and (max-width: 769px) {
+    li {
+        margin-left: 1rem; /*Added space between nav items*/
+    }
+
     .deals {
         display: none;
     }
@@ -126,6 +164,7 @@ a {
         display: none;
     }
     .deals-mobile {
+        visibility: visible;
         border: 0.15rem solid #427767;
         border-radius: 1rem;
         text-align: center;
@@ -133,13 +172,13 @@ a {
         color: #f9fffd;
         padding: 0 0.5rem;
         background-color: #129870;
+        cursor: pointer;
         box-shadow: 0.2rem 0.2rem 0.2rem; /*Will this look better on hover or active under pseudoclasses?*/
     }
     .deals-pc {
         display: none;
     }
 }
-
 
 
 /* Product section */
@@ -172,8 +211,46 @@ a {
 .item {
     justify-items: center;
     border: 2px solid #8a8a8a;
+    border-radius: 2rem;
     height: auto;
+    overflow: hidden;
 }
 
+#team { /*Container*/
+    border-top: 3px solid;
+    display: flex;
+    margin: 2rem;
+    padding-top: 2rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 3rem;
+}
+
+.member {
+    border: 2px solid #8a8a8a;
+    width: 19rem;
+    justify-content: center;
+    text-align: center;
+    text-wrap: wrap;
+    border-radius: 5%;
+    overflow: hidden;
+}
+/* Make on hover for each member */
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 1 1.5rem;
+    border: 1px solid black;
+    background-color: #352f2f;
+    opacity: 0.75;
+}
+
+footer h6 {
+    font-weight: 300;
+    color: whitesmoke;
+    opacity: 1;
+    background-color: #352f2f;
+}
 
 
