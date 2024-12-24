@@ -42,6 +42,14 @@ a {
     text-decoration: none;
     cursor: pointer;
 }
+a:hover {
+    text-decoration: underline;
+    color: rgb(69, 69, 85);
+}
+a:active {
+    text-decoration: none;
+    color: rgb(145, 10, 10);
+}
 
 button {
     margin: 1rem;
@@ -58,12 +66,15 @@ button:hover {
     border: 0.2rem solid #b8b7a5;
     width: 8.5rem;
     height: 2.15rem;
+    padding: 0;
+    margin: 0.75rem 0.75rem;
 }
 button:active {
     background-color: #cbc88b;
     border: 0.2rem solid #cbc88b;
     width: 8rem;
     height: 2rem;
+    margin: 1rem;
 }
 .deals-mobile{
     visibility: hidden;
@@ -71,6 +82,14 @@ button:active {
 
 .cart {
     width: 1.5rem;
+}
+.cart:hover {
+    border-bottom: 1px solid rgb(69, 69, 85);
+}
+.cart:active {
+    width: 1.2rem;
+    margin-left: 0.3rem;
+    margin-bottom: 0.2rem;
 }
 
 .logo {
@@ -139,11 +158,18 @@ button:active {
     cursor: pointer;
     position: absolute;
     /* top: 24.0625rem; */
-    right: 9%;
-    bottom: 51%;
-    min-height: 60px;
-    min-width:300px;
-    box-shadow: 0.2rem 0.2rem 0.2rem; /*Will this look better on hover or active under pseudoclasses?*/
+    right: 8%;
+    bottom: 45%;
+    min-height: 3.75rem;
+    min-width:18.75rem;
+    box-shadow: 0.2rem 0.2rem 0.2rem;
+}
+.deals:hover{
+    box-shadow: none;
+}
+.deals:active{
+    min-height: 3.50rem;
+    min-width:18.50rem;
 }
 
 @media only screen and (max-width: 834px) { /*removes the button inside the background img */
@@ -180,7 +206,6 @@ button:active {
     }
 }
 
-
 /* Product section */
 .range {
     padding: 1rem;
@@ -204,6 +229,7 @@ button:active {
     flex-wrap: wrap;
     gap: 1.25rem;
     margin-top: 2rem;  
+
 }
 
 /* Container for both catergories */
@@ -236,6 +262,9 @@ button:active {
     overflow: hidden;
 }
 /* Make on hover for each member */
+.item:hover {
+    box-shadow: 0.5rem 0.5rem 1rem;
+}
 
 footer {
     display: flex;
